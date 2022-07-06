@@ -1,0 +1,6 @@
+*.env*
+*.sql
+/public/storage
+.vscode
+.env
+public_html/storage
