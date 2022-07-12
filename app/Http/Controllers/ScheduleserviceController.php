@@ -102,7 +102,6 @@ class ScheduleserviceController extends Controller
             $companies= '';
         }
         if ($request->input()) {
-            //dd($request->input('employees'));
             $service = new Serviceschedule();
             if(AUth::user()->hasAnyPermission(['master', 'G3 Admin'])){
                 $service->company_id = $request->input('company_id');
@@ -110,7 +109,6 @@ class ScheduleserviceController extends Controller
                 $service->company_id = $company_id;
 
             }
-            //$service->employee_id = $request->input('employee');
             $service->date_ini = preg_replace('#(\d{2})/(\d{2})/(\d{4})#', '$3-$2-$1', $request->input('date_ini'));
             $service->date_end = preg_replace('#(\d{2})/(\d{2})/(\d{4})#', '$3-$2-$1', $request->input('date_end'));
             $service->service = $request->input('service');
@@ -120,7 +118,6 @@ class ScheduleserviceController extends Controller
             if ($request->hasFile('file')) {
                 $name=$request->file->getClientOriginalName();
 				$fileUpload = $request->file;
-				//$fileName=$request->file->getClientOriginalName();
 				$upload = $fileUpload->store('public/uploads');
                 
                 
