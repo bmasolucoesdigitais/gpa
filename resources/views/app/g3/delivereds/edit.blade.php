@@ -4,14 +4,21 @@
 @section('title', 'Abaco Tecnologia')
 
 @section('content_header')
-<h1>Delivereds Edit</h1>
+<div class="row">
+	<div class="col-md-6">
+		<h2>Editar entregas</h2>
+	</div>
+	<div class="col-md-6">
+		<a class="btn btn-primary" style="float: right;margin-top:22px" href="{{ url("/g3/delivereds") }}">Voltar</a>
+	</div>
+</div>
 @stop
 
 
 
 @section('content')
+<div class="row">
 <div class="col-md-12">
-
 	<div class="box box-primary">
 		<div class="box-header with-border">
 			<h3 class="box-title">Editar </h3>
@@ -67,14 +74,14 @@
 
 
 				<div class="box-footer">
-					<button type="submit" class="btn btn-primary">Save</button>
+					<button type="submit" class="btn btn-success" style="float: right;">Editar</button>
 				</div>
 			</div>
 		</form>
 
 
 	</div>
-
+</div>
 
 @section('js')
 <script type="text/javascript">
