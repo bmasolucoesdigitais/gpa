@@ -46,9 +46,6 @@ class DeliveredController extends Controller
 		$delivered->company_id = $request->input('company_id');
         $delivered->save();
 
-        dd($delivered->toArray());
-
-
         return redirect()->route('delivereds.index')->with('message', 'Delivered created successfully!');
     }
 
@@ -83,7 +80,6 @@ class DeliveredController extends Controller
 		$delivered->company_id = $request->input('company_id');
         $delivered->save();
 
-        dd($delivered->toArray());
         return redirect()->route('delivereds.index')->with('message', __('general.Delivered').' '. __('general.updated successfully!'));
     }
 
