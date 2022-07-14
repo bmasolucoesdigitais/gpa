@@ -13,9 +13,9 @@
                 <!-- /.login-logo -->
         <div class="login-box-body">
             <div class="login-logo">
-            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}"><img src="/images/logo_home.jpg" style="width: 280px"><!--{!! config('adminlte.logo', '<b>Admin</b>LTE') !!}--></a>
+            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}"><img src="http://g3.abacotecnologia.com.br/login_asset/imagens/logos/logo_black.png" style="width: 280px"><!--{!! config('adminlte.logo', '<b>Admin</b>LTE') !!}--></a>
         </div>
-            <p class="login-box-msg">{{ trans('adminlte::adminlte.login_message') }}</p>
+            <p style="font-weight: bold" class="login-box-msg">{{ trans('adminlte::adminlte.login_message') }}</p>
             <form action="{{ url(config('adminlte.login_url', 'login')) }}" method="post">
                 {!! csrf_field() !!}
 
@@ -30,7 +30,7 @@
                     @endif
                 </div>
                 <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
-                    <p>{{ trans('adminlte::adminlte.or') }}</p>
+                    <p style="text-align: center; font-size: 19px; font-weight: bold;">{{ trans('adminlte::adminlte.or') }}</p>
                 </div>
                 <div class="form-group has-feedback {{ $errors->has('cnpj') ? 'has-error' : '' }}">
                     <input type="cnpj" name="cnpj" id="cnpj" class="form-control" value="{{ old('cnpj') }}"
@@ -53,19 +53,16 @@
                     @endif
                 </div>
                 <div class="row">
-                    <div class="col-xs-8">
-                        <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox" name="remember"> {{ trans('adminlte::adminlte.remember_me') }}
-                            </label>
-                        </div>
+                    <div class="col-xs-6">
+                        <a target="_blank" href="login.php?RelayState=entrar"  class="btn btn-primary btn-flat">
+                            <object type="image/svg+xml" style="width:13px" data="https://s3-eu-west-1.amazonaws.com/cdn-testing.web.bas.ac.uk/scratch/bas-style-kit/ms-pictogram/ms-pictogram.svg" class="x-icon"></object> 
+                            Entrar com Microsoft
+                        </a>
                     </div>
-                    <!-- /.col -->
-                    <div class="col-xs-4">
+                    <div class="col-xs-6">
                         <button type="submit"
                                 class="btn btn-primary btn-block btn-flat">{{ trans('adminlte::adminlte.sign_in') }}</button>
                     </div>
-                    <!-- /.col -->
                 </div>
             </form>
             <div class="auth-links">

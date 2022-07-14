@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "216a4442bdbd8542a9d0ae890b616532",
+    "content-hash": "bfdeccec675f63fc6d54b1eea59a02fe",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1390,6 +1390,60 @@
                 "storage"
             ],
             "time": "2019-03-30T13:22:34+00:00"
+        },
+        {
+            "name": "miniorange/saml-laravel-free",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miniOrangeDev/saml-laravel-free.git",
+                "reference": "4f53b8bc2472432d7ec5ca1c2f93914c35f457a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miniOrangeDev/saml-laravel-free/zipball/4f53b8bc2472432d7ec5ca1c2f93914c35f457a0",
+                "reference": "4f53b8bc2472432d7ec5ca1c2f93914c35f457a0",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.2",
+                "php": "^5.1 || ^7.1 || ^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "provider\\ssoServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/connector.php"
+                ],
+                "psr-4": {
+                    "provider\\": "provider/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "miniOrange Security Software",
+                    "email": "laravelsupport@xecurify.com"
+                }
+            ],
+            "description": "miniOrange SAML Single Sign on (SSO) plugin acts as a SAML Service Provider which can be configured to establish the trust between the plugin and a SAML capable Identity Providers to securely authenticate the user to the Laravel site. We support all known IdPs – ADFS, Azure AD, Google Apps, Okta, Salesforce, Shibboleth, SimpleSAMLphp, OpenAM, Centrify, Ping, RSA, IBM, Oracle, OneLogin, Bitium, WSO2, NetIQ etc.",
+            "support": {
+                "issues": "https://github.com/miniOrangeDev/saml-laravel-free/issues",
+                "source": "https://github.com/miniOrangeDev/saml-laravel-free/tree/2.0"
+            },
+            "time": "2022-07-12T09:16:35+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5497,5 +5551,6 @@
     "platform": {
         "php": "^7.1.3"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
